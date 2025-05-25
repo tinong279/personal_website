@@ -1,0 +1,73 @@
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar {
+  background-color: white;
+  border-bottom: 1px solid #ccc;
+}
+
+.logoContainer {
+  /* background-color: rgba(255, 0, 0, 0.1); */
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  /* border: 4px solid green; */
+}
+
+.logoImage {
+  width: 40px;
+  height: auto;
+  display: block;
+}
+
+.logoText {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: black;
+  /* border: 1px solid red; */
+}
+
+.logoSub {
+  font-size: 0.875rem;
+  font-weight: normal;
+  /* border: 1px solid blue; */
+}
+
+.navLinks {
+  display: flex;
+  gap: 2.5rem;
+  font-size: 1.125rem;
+  color: #374151;
+  /* border: 1px solid red; */
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: #374151;
+  transition: color 0.2s ease;
+  /* border: 1px solid red; */
+}
+
+.navLinks a:hover {
+  color: #3b82f6;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 2rem;
+  font-size: 2rem;
+  /* border: 1px solid red; */
+}
+
+.socialIcons a {
+  color: black;
+  transition: color 0.2s ease;
+  /* border: 1px solid red; */
+}

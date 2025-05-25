@@ -1,0 +1,43 @@
+import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+import styles from "./Navbar.module.css";
+
+const Navbar = () => {
+  return (
+    <nav className={styles.navbar}>
+      {/* 左側 LOGO 與文字 */}
+      <div className={styles.container}>
+        <div className={styles.logoContainer}>
+          <img src="/blacklogo.svg" alt="logo" className={styles.logoImage} />
+          <span className={styles.logoText}>
+            彥廷個人網站
+            <br />
+            <span className={styles.logoSub}>Portfolio</span>
+          </span>
+        </div>
+
+        {/* 中間導覽列 */}
+        <div className={styles.navLinks}>
+          <a href="#about">About Me</a>
+          <a href="#projects">Career</a>
+          <a href="#projects">Projects</a>
+          <a href="#blog">Blog</a>
+        </div>
+
+        {/* 右側社群圖示 */}
+        <div className={styles.socialIcons}>
+          <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+            <FaLinkedin />
+          </a>
+          <a href="https://github.com" target="_blank" rel="noreferrer">
+            <FaGithub />
+          </a>
+          <a href="mailto:someone@example.com">
+            <FaEnvelope />
+          </a>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;

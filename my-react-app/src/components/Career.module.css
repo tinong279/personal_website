@@ -1,0 +1,88 @@
+.container {
+  padding: 4rem 2rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0.6rem;
+  width: 2px;
+  background-color: #cfd8dc;
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.bullet {
+  position: absolute;
+  top: 0.4rem;
+  left: -0.2rem;
+  font-size: 0.75rem;
+  color: #37474f;
+}
+
+.jobBlock {
+  padding-left: 2rem;
+}
+
+.date {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+.logoAndTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.jobTitle {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tag {
+  background-color: #eedeff;
+  color: #6c3ab8;
+  font-size: 0.875rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+}
+
+.description {
+  padding-left: 1rem;
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}

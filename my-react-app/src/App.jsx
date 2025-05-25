@@ -1,6 +1,11 @@
 import { useState } from "react";
-import "./App.css";
-import Navbar from "./component/Navbar";
+import Navbar from "./components/Navbar";
+import HeroSection from "./components/HeroSection";
+import AboutMe from "./components/AboutMe";
+import Skills from "./components/Skills";
+import Career from "./components/Career";
+import ProjectList from "./components/ProjectList";
+import Footer from "./components/Footer";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -8,14 +13,12 @@ function App() {
   return (
     <div>
       <Navbar />
-      <main className="p-6">
-        <h2 className="text-3x1 font-bold text-blue-600">
-          Welcome to my site!
-        </h2>
-        <p className="mt-4 text-grat-600">
-          This is a beautiful Tailwind-powered portfolio
-        </p>
-      </main>
+      <HeroSection />
+      <AboutMe />
+      <Skills />
+      <Career />
+      <ProjectList />
+      <Footer />
     </div>
   );
 }
