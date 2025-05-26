@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules"; // ✅ 新版用 modules
 import "swiper/css";
 import "swiper/css/navigation";
 import styles from "./ProjectList.module.css";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const projects = [
   {
@@ -39,9 +40,7 @@ const projects = [
 const ProjectList = () => {
   const [index, setIndex] = useState(0);
   const project = projects[index];
-
- 
-
+  const swiperRef = useRef(null);
   return (
     <div className={styles.container}>
       <div className={styles.slider}>
@@ -52,23 +51,32 @@ const ProjectList = () => {
             side projects to learn new things. I hope you like them.
           </p>
           <div className={styles.ton}>
-            <div className="swiper-button-prev"></div>
-            <div className="swiper-button-next"></div>
+            <button
+              className={styles.arrow}
+              onClick={() => swiperRef.current?.slideNext()}
+            >
+              <FaChevronLeft size={20} />
+            </button>
+            <button
+              className={styles.arrow}
+              onClick={() => swiperRef.current?.slidePrev()}
+            >
+              <FaChevronRight size={20} />
+            </button>
           </div>
         </div>
 
         <div className={styles.rightPanel}>
           <Swiper
-           
             modules={[Navigation]}
             // navigation={true}
+            onSwiper={(swiper) => (swiperRef.current = swiper)}
             loop={true}
             slidesPerView={1}
-            spaceBetween={30}
-            centeredSlides={true}
+            spaceBetween={0}
+            centeredSlides={false}
             // pagination={{ clickable: true }}
           >
-            
             {projects.map((item, i) => (
               <SwiperSlide key={i}>
                 <div className={styles.slideContent}>
