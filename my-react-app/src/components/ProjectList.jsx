@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules"; // ✅ 新版用 modules
+import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import styles from "./ProjectList.module.css";
@@ -10,29 +10,28 @@ const projects = [
   {
     date: "May",
     year: "2025",
-    title: "個人網站",
+    title: "朝聖之路",
     description:
-      "Ithome Blog Upload On Readme is a GitHub Action that automatically uploads the latest blog post from Ithome to the README.md file of a GitHub repository. It uses Node.js and Puppeteer to crawl the Ithome website and retrieve the latest blog post. The action is triggered by a...",
-    image: "/A1.jpg", // 實際圖片路徑
-    link: "https://github.com/your-project",
+      "朝聖之路是一個團體協作專題，前端是用React，後端用Node.js連結Neon資料庫來完成，我負責套裝行程的全端製作，以及購物頁面串接到第三方支付-綠界",
+    image: "/A3.png",
+    link: "https://github.com/ScottLinxplore/Camino_team1.git",
   },
   {
     date: "Mar",
     year: "2025",
     title: "潛水網站",
     description:
-      "Ithome Blog Upload On Readme is a GitHub Action that automatically uploads the latest blog post from Ithome to the README.md file of a GitHub repository. It uses Node.js and Puppeteer to crawl the Ithome website and retrieve the latest blog post. The action is triggered by a...",
-    image: "/墾丁.jpg", // 實際圖片路徑
-    link: "https://github.com/your-project",
+      "這是一個給有潛水需求的客戶，可以利用此網站找到可以潛水的景點，也包含各項潛水用品的購買",
+    image: "/A5.png",
+    link: "https://github.com/tinong279/AAA.git",
   },
   {
     date: "Apr",
-    year: "2024",
-    title: "朝聖之路",
-    description:
-      "Ithome Blog Upload On Readme is a GitHub Action that automatically uploads the latest blog post from Ithome to the README.md file of a GitHub repository. It uses Node.js and Puppeteer to crawl the Ithome website and retrieve the latest blog post. The action is triggered by a...",
-    image: "/潮境公園.webp", // 實際圖片路徑
-    link: "https://github.com/your-project",
+    year: "2025",
+    title: "圈圈叉叉遊戲實作",
+    description: "這是利用React製作的一個小遊戲",
+    image: "/A4.png",
+    link: "https://github.com/tinong279/tic-tac-toe.git",
   },
   // 可再加更多 project 資料
 ];
@@ -42,13 +41,12 @@ const ProjectList = () => {
   const project = projects[index];
   const swiperRef = useRef(null);
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="projects">
       <div className={styles.slider}>
         <div className={styles.leftPanel}>
           <h2 className={styles.title}>Project List</h2>
           <p className={styles.subtitle}>
-            Here are some of the projects I have worked on. I always try to make
-            side projects to learn new things. I hope you like them.
+            以下是我目前的實作專案，並持續透過專案開發深化各項技能。
           </p>
           <div className={styles.ton}>
             <button
@@ -81,12 +79,20 @@ const ProjectList = () => {
               <SwiperSlide key={i}>
                 <div className={styles.slideContent}>
                   <img src={item.image} alt={`Slide ${i + 1}`} />
-                  <div>
+                  <div className={styles.card}>
                     <p>
                       {item.year}/{item.date}
                     </p>
                     <p>{item.title}</p>
                     <p>{item.description}</p>
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.btn}
+                    >
+                      查看專題
+                    </a>
                   </div>
                 </div>
               </SwiperSlide>

@@ -4,20 +4,11 @@ import styles from "./Footer.module.css";
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <p className={styles.name}>Charonyu</p>
-      <p>Thank you for visiting my website.</p>
-      <p>I hope you found it enjoyable and informative.</p>
-      <p>
-        If you have any questions or suggestions, please feel free to reach
-        <br />
-        out to me.
-      </p>
-      <p>
-        I am always eager to hear from you. You can contact me via email,
-        <br />
-        or connect with me on LinkedIn or GitHub.
-      </p>
-      <p>Looking forward to connecting with you! 😁</p>
+      <p className={styles.name}>YenTing</p>
+      <p>謝謝您觀看我的網站。</p>
+      <p>如果你想進一步交流，歡迎透過以下方式聯絡我！</p>
+
+      <p>期待未來有機會與您合作</p>
     </footer>
   );
 };

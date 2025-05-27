@@ -78,20 +78,23 @@
 
 .slideContent {
   display: flex;
-  align-items: center;
-  gap: 1.5rem;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 1rem;
   padding: 1.5rem;
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   max-width: 90%;
   margin: 0 auto;
+  height: auto;
+  /* border: 1px solid red; */
 }
 
 .slideContent img {
-  width: 40%;
+  width: 65%;
   /* 調整圖片大小 */
-  height: 200px;
+  /* height: 250px; */
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -112,10 +115,32 @@
   /* border: 1px s  olid red; */
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  height: 30vh;
+  gap: 1rem;
+  text-align: center;
+  align-items: stretch;
+  /* border: 1px solid blue; */
+}
+
 .swiper-button-prev {
   left: 10px;
 }
 
 .swiper-button-next {
   right: 10px;
+}
+
+.btn {
+  margin-top: auto; /* 關鍵：推到底 */
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #00796b;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
 }

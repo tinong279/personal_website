@@ -1,17 +1,26 @@
 .container {
   padding: 4rem 2rem;
+  /* border: 1px solid blue; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column; /* 改為垂直排列 */
+  align-items: center;
 }
 
 .title {
+  /* justify-content: center; */
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
   margin-bottom: 2rem;
+  /* text-align: center; */
 }
 
 .timeline {
   position: relative;
   padding-left: 2rem;
+  /* text-align: center; */
+  /* border: 1px solid blue; */
 }
 
 .line {
@@ -26,6 +35,7 @@
 .timelineItem {
   position: relative;
   margin-bottom: 3rem;
+  /* text-align: center; */
 }
 
 .bullet {
@@ -34,10 +44,12 @@
   left: -0.2rem;
   font-size: 0.75rem;
   color: #37474f;
+  /* text-align: center; */
 }
 
 .jobBlock {
   padding-left: 2rem;
+  /* text-align: center; */
 }
 
 .date {

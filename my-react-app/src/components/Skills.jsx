@@ -20,62 +20,40 @@ const SkillSection = ({ icon, title, skills }) => (
 
 const Skills = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="skills">
       <h2 className={styles.title}>Skills</h2>
-      <p className={styles.subtitle}>
-        I have experience in the following technologies.
-      </p>
+      <p className={styles.subtitle}>以下是我學習並使用過的技術。</p>
       <div className={styles.grid}>
         <SkillSection
           icon={<FaReact className={styles.icon} />}
           title="Frontend"
           skills={[
+            "HTML",
+            "CSS",
+            "SCSS",
+            "JavaScript",
+            "jQuery",
             "React",
-            "React Native",
-            "Next.js",
-            "TypeScript",
-            "Styled Components",
-            "Tailwind CSS",
-            "Redux/Zustand",
-            "Jest Unit Test",
-            "React Query",
-            "i18n / react-intl",
-            "WebRTC/WebSocket",
-            "Dexie.js",
-            "Three.js",
+            "Bootstrap",
           ]}
         />
         <SkillSection
           icon={<FaNodeJs className={styles.icon} />}
           title="Backend"
-          skills={[
-            "Node.js",
-            "Express",
-            "PHP",
-            "RESTful API",
-            "GCP Compute Engine",
-            "JWT/Bcrypt",
-            "Docker",
-            "Github Action CI/CD",
-            "Crawling",
-            "Flask",
-            "Line Bot",
-          ]}
+          skills={["Node.js", "Express", "PHP", "RESTful API"]}
         />
         <SkillSection
           icon={<FaDatabase className={styles.icon} />}
           title="DataBase & Tools"
           skills={[
             "Git",
-            "MongoDB",
+            "Neon",
             "MySQL",
-            "Firebase",
-            "Postgresql",
-            "LightHouse",
-            "Vercel / Netlify / Github pages",
             "Figma",
             "Github",
-            "Asana",
+            "Postman",
+            "VSCode",
+            "Render",
           ]}
         />
       </div>
