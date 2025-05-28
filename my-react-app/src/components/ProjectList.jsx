@@ -12,7 +12,7 @@ const projects = [
     year: "2025",
     title: "朝聖之路",
     description:
-      "朝聖之路是一個團體協作專題，前端是用React，後端用Node.js連結Neon資料庫來完成，我負責套裝行程的全端製作，以及購物頁面串接到第三方支付-綠界",
+      "朝聖之路是一個團體協作專題，前端是用React，後端用Node.js連結Neon資料庫來完成",
     image: "/A3.png",
     link: "https://github.com/ScottLinxplore/Camino_team1.git",
   },
@@ -29,7 +29,7 @@ const projects = [
     date: "Apr",
     year: "2025",
     title: "圈圈叉叉遊戲實作",
-    description: "這是利用React製作的一個小遊戲",
+    description: "這是利用React製作的一個小遊戲，下方會即時記錄遊戲歷程",
     image: "/A4.png",
     link: "https://github.com/tinong279/tic-tac-toe.git",
   },
