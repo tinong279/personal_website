@@ -16,7 +16,7 @@ const HeroSection = () => {
           React Developer / Full Stack Engineer
         </p>
         <a href="#about" className={styles.button}>
-          了解更多我
+          關於我
         </a>
       </div>
     </section>
