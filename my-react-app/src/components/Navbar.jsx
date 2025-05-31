@@ -8,7 +8,7 @@ const Navbar = () => {
       <div className={styles.container}>
         <a href="#navbar">
           <div className={styles.logoContainer}>
-            <img src="/blacklogo.svg" alt="logo" className={styles.logoImage} />
+            {/* <img src="/blacklogo.svg" alt="logo" className={styles.logoImage} /> */}
             <span className={styles.logoText}>
               YenTing's
               <br />
