@@ -23,7 +23,7 @@ const projects = [
     description:
       "這是一個給有潛水需求的客戶，可以利用此網站找到可以潛水的景點，也包含各項潛水用品的購買",
     image: "/A5.png",
-    link: "https://github.com/tinong279/AAA.git",
+    link: "https://diving-site.onrender.com",
   },
   {
     date: "Apr",

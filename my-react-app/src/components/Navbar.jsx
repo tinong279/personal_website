@@ -28,7 +28,7 @@ const Navbar = () => {
         {/* 右側社群圖示 */}
         <div className={styles.socialIcons}>
           <a
-            href="https://www.linkedin.com/in/%E5%BD%A5%E5%BB%B7-%E8%91%A3-65225a329/"
+            href="www.linkedin.com/in/yen-ting-tung-65225a329"
             target="_blank"
             rel="noreferrer"
           >
