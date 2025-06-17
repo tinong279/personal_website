@@ -1,14 +1,24 @@
-import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+import { useState } from "react";
+import {
+  FaLinkedin,
+  FaGithub,
+  FaEnvelope,
+  FaBars,
+  FaTimes,
+} from "react-icons/fa";
 import styles from "./Navbar.module.css";
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
   return (
     <nav className={styles.navbar}>
-      {/* 左側 LOGO 與文字 */}
-      <div className={styles.container}>
+      {/* <div className={styles.container}> */}
+      <div className={styles.tainer}>
         <a href="#navbar">
           <div className={styles.logoContainer}>
-            {/* <img src="/blacklogo.svg" alt="logo" className={styles.logoImage} /> */}
             <span className={styles.logoText}>
               YenTing's
               <br />
@@ -16,16 +26,29 @@ const Navbar = () => {
             </span>
           </div>
         </a>
+      </div>
 
-        {/* 中間導覽列 */}
+      <div className={styles.menuIcon} onClick={toggleMenu}>
+        {menuOpen ? <FaTimes /> : <FaBars />}
+      </div>
+
+      <div className={`${styles.navMenu} ${menuOpen ? styles.open : ""}`}>
         <div className={styles.navLinks}>
-          <a href="#about">About Me</a>
-          <a href="#skills">Skills</a>
-          <a href="#career">Career</a>
-          <a href="#projects">Projects</a>
+          <a href="#about" onClick={toggleMenu}>
+            About Me
+          </a>
+          <a href="#skills" onClick={toggleMenu}>
+            Skills
+          </a>
+          <a href="#career" onClick={toggleMenu}>
+            Career
+          </a>
+          <a href="#projects" onClick={toggleMenu}>
+            Projects
+          </a>
         </div>
-
-        {/* 右側社群圖示 */}
+      </div>
+      <div className={`${styles.navIcons} ${menuOpen ? styles.open : ""}`}>
         <div className={styles.socialIcons}>
           <a
             href="https://www.linkedin.com/in/yen-ting-tung-65225a329"
@@ -46,6 +69,8 @@ const Navbar = () => {
           </a>
         </div>
       </div>
+      {/* <div className={styles.spacer}></div> */}
+      {/* </div> */}
     </nav>
   );
 };
